@@ -1,0 +1,57 @@
+create table html(
+HTML_id integer primary key autoincrement,
+name text);
+
+
+create table bansa(
+Bansa_id integer primary key autoincrement,
+name text);
+
+create table visit(
+HTML_id integer,
+Bansa_id integer,
+occ integer);
+
+
+insert into html (name) values 
+("one"),
+("two"),
+("three"),
+("four"),
+("five");
+
+insert into bansa (name) values
+("beijing"),
+("paris"),
+("chicago"),
+("bogota"),
+("nairobi");
+
+insert into visit values
+(1,1,3),
+(2,1,2),
+(3,1,6),
+(1,2,5),
+(2,2,1),
+(1,3,5),
+(3,3,3),
+(4,3,3),
+(2,4,3),
+(5,4,2),
+(4,5,1),
+(4,2,2),
+(5,4,7);
+
+create table link(
+html_id integer,
+link_to text);
+
+insert into link values
+(1,"three"),
+(1,"two"),
+(2,"four"),
+(3,"four"),
+(4,"five"),
+(5,"one"),
+(5,"four"),
+(5,"two");
